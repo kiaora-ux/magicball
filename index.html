@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Magic Ball</title>
+  <meta name="description" content="A magic ball that fails to solve your burning questions with hilarious answers and questionable advice.">
+  <meta name="theme-color" content="#0b0b14">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="stage">
+    <button class="ball" id="ball" type="button" aria-label="Shake the magic ball">
+      <span class="ball__shine" aria-hidden="true"></span>
+      <span class="ball__face ball__face--eight" aria-hidden="true">
+        <span class="eight">8</span>
+      </span>
+      <span class="ball__face ball__face--window" aria-hidden="true">
+        <span class="triangle">
+          <span class="answer" id="answer"></span>
+        </span>
+      </span>
+    </button>
+
+    <p class="hint" id="hint">Think of a question, then shake your phone or tap the ball.</p>
+    <p class="sr-only" id="live" aria-live="polite"></p>
+  </main>
+
+  <div class="wake" id="wake" hidden>
+    <div class="wake__card">
+      <p class="wake__title">The ball is asleep.</p>
+      <p class="wake__text">Let it feel your phone move so you can shake it for answers.</p>
+      <button class="wake__btn" id="wakeBtn" type="button">Tap to wake the ball</button>
+      <button class="wake__skip" id="wakeSkip" type="button">I'll just tap it</button>
+    </div>
+  </div>
+
+  <script src="answers.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
